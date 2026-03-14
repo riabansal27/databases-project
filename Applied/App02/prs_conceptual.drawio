@@ -7,6 +7,9 @@
         <mxCell id="TGk-_gIdcGaK3wwubXLX-1" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="Property Rental System Conceptual Model&lt;div&gt;Ria Bansal - 34267433&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="100" x="380" y="20" as="geometry" />
         </mxCell>
+        <mxCell id="TqjnDCkR5WKAWIbkAPyT-1" edge="1" parent="1" source="TGk-_gIdcGaK3wwubXLX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="TGk-_gIdcGaK3wwubXLX-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="TGk-_gIdcGaK3wwubXLX-14" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fontSize=14;strokeWidth=1;container=1;collapsible=1;rounded=0;" value="OWNER" vertex="1">
           <mxGeometry height="102" width="146" x="322" y="120" as="geometry">
             <mxRectangle height="30" width="90" x="240" y="160" as="alternateBounds" />
@@ -94,6 +97,9 @@
           <mxGeometry height="24" width="99" x="47" as="geometry">
             <mxRectangle height="24" width="99" as="alternateBounds" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="TqjnDCkR5WKAWIbkAPyT-5" edge="1" parent="1" source="TGk-_gIdcGaK3wwubXLX-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="TGk-_gIdcGaK3wwubXLX-55">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="TGk-_gIdcGaK3wwubXLX-34" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fontSize=14;strokeWidth=1;container=1;collapsible=1;rounded=0;" value="TENANT" vertex="1">
           <mxGeometry height="102" width="146" x="30" y="340" as="geometry">
@@ -184,7 +190,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="TGk-_gIdcGaK3wwubXLX-54" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fontSize=14;strokeWidth=1;container=1;collapsible=1;rounded=0;" value="PAYMENT" vertex="1">
-          <mxGeometry height="102" width="146" x="176" y="620" as="geometry">
+          <mxGeometry height="102" width="146" x="260" y="534" as="geometry">
             <mxRectangle height="30" width="90" x="240" y="160" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -226,6 +232,17 @@
           <mxGeometry height="24" width="99" x="47" as="geometry">
             <mxRectangle height="24" width="99" as="alternateBounds" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="TqjnDCkR5WKAWIbkAPyT-2" edge="1" parent="1" source="TGk-_gIdcGaK3wwubXLX-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="406" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TqjnDCkR5WKAWIbkAPyT-3" edge="1" parent="1" source="TGk-_gIdcGaK3wwubXLX-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="TGk-_gIdcGaK3wwubXLX-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TqjnDCkR5WKAWIbkAPyT-4" edge="1" parent="1" source="TGk-_gIdcGaK3wwubXLX-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.925;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="TGk-_gIdcGaK3wwubXLX-54">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
