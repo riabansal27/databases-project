@@ -49,7 +49,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2MgSQHy7jnv0lyv5muUZ-12" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fontSize=14;strokeWidth=1;container=1;collapsible=1;rounded=0;" value="PAYMENT" vertex="1">
-          <mxGeometry height="104" width="154" x="337" y="86" as="geometry">
+          <mxGeometry height="128" width="154" x="337" y="86" as="geometry">
             <mxRectangle height="30" width="90" x="240" y="160" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -88,6 +88,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2MgSQHy7jnv0lyv5muUZ-21" parent="2MgSQHy7jnv0lyv5muUZ-19" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" value="account_type" vertex="1">
+          <mxGeometry height="24" width="104" x="50" as="geometry">
+            <mxRectangle height="24" width="104" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2MgSQHy7jnv0lyv5muUZ-115" parent="2MgSQHy7jnv0lyv5muUZ-12" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1">
+          <mxGeometry height="24" width="154" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="2MgSQHy7jnv0lyv5muUZ-116" parent="2MgSQHy7jnv0lyv5muUZ-115" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1">
+          <mxGeometry height="24" width="50" as="geometry">
+            <mxRectangle height="24" width="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2MgSQHy7jnv0lyv5muUZ-117" parent="2MgSQHy7jnv0lyv5muUZ-115" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" value="amount" vertex="1">
           <mxGeometry height="24" width="104" x="50" as="geometry">
             <mxRectangle height="24" width="104" as="alternateBounds" />
           </mxGeometry>
