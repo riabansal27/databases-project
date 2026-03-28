@@ -362,8 +362,17 @@
             <mxRectangle height="24" width="142" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="2GaqxNF3SoOoXYBnHSbk-17" edge="1" parent="1" source="2MgSQHy7jnv0lyv5muUZ-102" style="endArrow=ERzeroToOne;endFill=0;startArrow=ERmandOne;startFill=0;dashed=1;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;" target="2MgSQHy7jnv0lyv5muUZ-16">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="2GaqxNF3SoOoXYBnHSbk-18" edge="1" parent="1" source="2MgSQHy7jnv0lyv5muUZ-112" style="endArrow=ERzeroToOne;endFill=0;startArrow=ERmandOne;startFill=0;dashed=1;strokeWidth=2;rounded=0;curved=0;exitX=0.492;exitY=1.089;exitDx=0;exitDy=0;exitPerimeter=0;" target="2MgSQHy7jnv0lyv5muUZ-16">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-720" y="-134" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2GaqxNF3SoOoXYBnHSbk-19" connectable="0" parent="2GaqxNF3SoOoXYBnHSbk-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=13;" value="charged in" vertex="1">
+          <mxGeometry relative="1" x="0.011" y="-4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="2MgSQHy7jnv0lyv5muUZ-102" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fontSize=14;strokeWidth=1;container=1;collapsible=1;rounded=0;" value="DAMAGE" vertex="1">
           <mxGeometry height="126" width="210" x="-820" y="-513" as="geometry">
@@ -439,7 +448,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2MgSQHy7jnv0lyv5muUZ-171" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=20;fontStyle=1;verticalAlign=middle;align=center;" value="Ria Bansal&lt;div&gt;Student ID:34267433&lt;/div&gt;" vertex="1">
-          <mxGeometry height="80" width="240" x="-510" y="-1000" as="geometry" />
+          <mxGeometry height="80" width="240" x="-510" y="-980" as="geometry" />
         </mxCell>
         <mxCell id="2GaqxNF3SoOoXYBnHSbk-6" edge="1" parent="1" source="2MgSQHy7jnv0lyv5muUZ-36" style="endArrow=ERzeroToMany;endFill=0;startArrow=ERmandOne;startFill=0;dashed=0;edgeStyle=orthogonalEdgeStyle;strokeWidth=2;" target="2MgSQHy7jnv0lyv5muUZ-67">
           <mxGeometry relative="1" as="geometry" />
@@ -458,7 +467,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2GaqxNF3SoOoXYBnHSbk-16" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" value="Property Rental System - Conceptual ERD" vertex="1">
-          <mxGeometry height="40" width="100" x="-440" y="-1040" as="geometry" />
+          <mxGeometry height="40" width="80" x="-420" y="-1010" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
