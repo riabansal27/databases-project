@@ -75,5 +75,6 @@ ALTER TABLE salesrep_drug
 ALTER TABLE salesrep_drug
     ADD CONSTRAINT sd_salesrep_fk FOREIGN KEY (slsrep_id)
         REFERENCES salesrep (slsrep_id);
+        
 spool off
 set echo off
