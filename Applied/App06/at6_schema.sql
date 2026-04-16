@@ -1,3 +1,4 @@
+-- Output file commands
 set echo on
 spool at6_schema_output.txt
 
