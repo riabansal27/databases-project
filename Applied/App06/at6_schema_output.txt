@@ -1,0 +1,142 @@
+SQL> 
+SQL> -- =============================================
+SQL> -- AT6 Schema Script
+SQL> -- Author: Ria Bansal
+SQL> -- Student ID: 34267433
+SQL> -- Date: 16 April 2026
+SQL> -- Description: DDL for SALESREP, DRUG, SALESREP_DRUG
+SQL> -- =============================================
+SQL> 
+SQL> -- Drop tables
+SQL> drop table salesrep_drug cascade constraints purge;
+
+Table SALESREP_DRUG dropped.
+
+SQL> drop table salesrep cascade constraints purge;
+
+Table SALESREP dropped.
+
+SQL> drop table drug cascade constraints purge;
+
+Table DRUG dropped.
+
+SQL> 
+SQL> -- Create SALESREP table
+SQL> CREATE TABLE salesrep (
+  2      slsrep_id     NUMBER(3)    NOT NULL,
+  3      slsrep_name   VARCHAR2(50) NOT NULL,
+  4      slsrep_mobile CHAR(10)     NOT NULL
+  5  );
+
+Table SALESREP created.
+
+SQL> 
+SQL> -- Create DRUG table
+SQL> CREATE TABLE drug (
+  2      drug_code  CHAR(6)      NOT NULL,
+  3      drug_name  VARCHAR2(50) NOT NULL,
+  4      drug_pbs   CHAR(1)      NOT NULL
+  5  );
+
+Table DRUG created.
+
+SQL> 
+SQL> -- Create SALESREP_DRUG table
+SQL> CREATE TABLE salesrep_drug (
+  2      drug_code        CHAR(6)   NOT NULL,
+  3      slsrep_id        NUMBER(3) NOT NULL,
+  4      sd_date_assigned DATE      NOT NULL
+  5  );
+
+Table SALESREP_DRUG created.
+
+SQL> 
+SQL> -- Add column comments
+SQL> COMMENT ON COLUMN salesrep.slsrep_id IS 'unique identifier for each sales representative';
+
+Comment created.
+
+SQL> COMMENT ON COLUMN salesrep.slsrep_name IS 'full name of the sales representative';
+
+Comment created.
+
+SQL> COMMENT ON COLUMN salesrep.slsrep_mobile IS 'unique mobile phone number of sales representative';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN drug.drug_code IS 'unique code identifying each drug';
+
+Comment created.
+
+SQL> COMMENT ON COLUMN drug.drug_name IS 'name of the drug';
+
+Comment created.
+
+SQL> COMMENT ON COLUMN drug.drug_pbs IS 'PBS coverage status: Y = covered, N = not covered';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN salesrep_drug.drug_code IS 'drug code, part of composite primary key';
+
+Comment created.
+
+SQL> COMMENT ON COLUMN salesrep_drug.slsrep_id IS 'sales rep id, part of composite primary key';
+
+Comment created.
+
+SQL> COMMENT ON COLUMN salesrep_drug.sd_date_assigned IS 'date the sales rep was assigned to the drug';
+
+Comment created.
+
+SQL> 
+SQL> -- Add PRIMARY KEY constraints
+SQL> ALTER TABLE salesrep
+  2      ADD CONSTRAINT salesrep_pk PRIMARY KEY (slsrep_id);
+
+Table SALESREP altered.
+
+SQL> 
+SQL> ALTER TABLE drug
+  2      ADD CONSTRAINT drug_pk PRIMARY KEY (drug_code);
+
+Table DRUG altered.
+
+SQL> 
+SQL> ALTER TABLE salesrep_drug
+  2      ADD CONSTRAINT salesrep_drug_pk PRIMARY KEY (drug_code, slsrep_id);
+
+Table SALESREP_DRUG altered.
+
+SQL> 
+SQL> -- Add UNIQUE constraint
+SQL> ALTER TABLE salesrep
+  2      ADD CONSTRAINT salesrep_mobile_uq UNIQUE (slsrep_mobile);
+
+Table SALESREP altered.
+
+SQL> 
+SQL> -- Add CHECK constraint
+SQL> ALTER TABLE drug
+  2      ADD CONSTRAINT drug_pbs_ck CHECK (drug_pbs IN ('Y', 'N'));
+
+Table DRUG altered.
+
+SQL> 
+SQL> -- Add FOREIGN KEY constraints
+SQL> ALTER TABLE salesrep_drug
+  2      ADD CONSTRAINT sd_drug_fk FOREIGN KEY (drug_code)
+  3          REFERENCES drug (drug_code);
+
+Table SALESREP_DRUG altered.
+
+SQL> 
+SQL> ALTER TABLE salesrep_drug
+  2      ADD CONSTRAINT sd_salesrep_fk FOREIGN KEY (slsrep_id)
+  3          REFERENCES salesrep (slsrep_id);
+
+Table SALESREP_DRUG altered.
+
+SQL> 
+SQL> spool off
