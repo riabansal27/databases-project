@@ -1,0 +1,92 @@
+SQL> 
+SQL> -- describe tables
+SQL> desc product;
+Name       Null?    Type         
+---------- -------- ------------ 
+PROD_NO    NOT NULL NUMBER(4)    
+PROD_NAME  NOT NULL VARCHAR2(50) 
+PROD_PRICE NOT NULL NUMBER(6,2)  
+PROD_STOCK NOT NULL NUMBER(3)    
+VENDOR_ID  NOT NULL NUMBER(3)    
+SQL> desc vendor;
+Name         Null?    Type         
+------------ -------- ------------ 
+VENDOR_ID    NOT NULL NUMBER(3)    
+VENDOR_NAME  NOT NULL VARCHAR2(50) 
+VENDOR_PHONE NOT NULL CHAR(10)     
+SQL> 
+SQL> -- show data inserted
+SQL> select * from vendor order by vendor_id;
+
+ VENDOR_ID VENDOR_NAME                                        VENDOR_PHO
+---------- -------------------------------------------------- ----------
+         1 Western Digital                                    1234567890
+         2 Seagate                                            0987654321
+         3 Samsung                                            1122334455
+         4 Sony                                               5544332211
+         5 LG Electronics                                     6677889900
+
+SQL> select * from product order by prod_no;
+
+   PROD_NO PROD_NAME                                          PROD_PRICE PROD_STOCK  VENDOR_ID
+---------- -------------------------------------------------- ---------- ---------- ----------
+         1 2TB My Cloud Drive                                        195          5          1
+         2 1TB Portable Hard Drive                                    76          4          1
+         3 Live Media Player                                         119         15          1
+         4 2TB Desktop Drive                                          94         12          2
+         5 4TB NAS Drive                                              76          8          2
+         6 2TB Personal Storage                                      169          3          2
+         7 Samsung 970 EVO SSD                                       149         20          3
+         8 Samsung T7 Portable SSD                                    99          7          3
+         9 Sony 64GB SD Card                                          25          9          4
+        10 Sony 128GB SD Card                                         45         25          4
+
+10 rows selected. 
+
+SQL> 
+SQL> SELECT '1. VENDOR Rows (5 required): ' AS "Table Loaded",
+  2         COUNT(*)
+  3    FROM vendor
+  4  UNION
+  5  SELECT '2. PRODUCT Rows (10 required): ',
+  6         COUNT(*)
+  7    FROM product;
+
+Table Loaded                      COUNT(*)
+------------------------------- ----------
+1. VENDOR Rows (5 required):             5
+2. PRODUCT Rows (10 required):          10
+
+SQL> 
+SQL> -- Vendors without products
+SQL> select 'Vendor without products' as vendor_details, vendor_id
+  2  from vendor where vendor_id not in (select vendor_id from product)
+  3  order by vendor_id;
+
+VENDOR_DETAILS           VENDOR_ID
+----------------------- ----------
+Vendor without products          5
+
+SQL> 
+SQL> -- products with stock < 10
+SQL> SELECT PROD_NO,
+  2      PROD_NAME,
+  3      PROD_PRICE,
+  4      prod_stock
+  5   FROM PRODUCT
+  6   where prod_stock < 10
+  7      order by prod_stock;
+
+   PROD_NO PROD_NAME                                          PROD_PRICE PROD_STOCK
+---------- -------------------------------------------------- ---------- ----------
+         6 2TB Personal Storage                                      169          3
+         2 1TB Portable Hard Drive                                    76          4
+         1 2TB My Cloud Drive                                        195          5
+         8 Samsung T7 Portable SSD                                    99          7
+         5 4TB NAS Drive                                              76          8
+         9 Sony 64GB SD Card                                          25          9
+
+6 rows selected. 
+
+SQL> 
+SQL> set echo OFF
