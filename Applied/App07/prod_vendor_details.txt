@@ -20,26 +20,26 @@ SQL> select * from vendor order by vendor_id;
 
  VENDOR_ID VENDOR_NAME                                        VENDOR_PHO
 ---------- -------------------------------------------------- ----------
-         1 Western Digital                                    1234567890
-         2 Seagate                                            0987654321
-         3 Samsung                                            1122334455
-         4 Sony                                               5544332211
-         5 LG Electronics                                     6677889900
+       101 TechSupply Co                                      5551234567
+       102 Global Electronics                                 5552345678
+       103 Office Essentials Ltd                              5553456789
+       104 Premium Hardware Inc                               5554567890
+       105 Digital Solutions Group                            5555678901
 
 SQL> select * from product order by prod_no;
 
    PROD_NO PROD_NAME                                          PROD_PRICE PROD_STOCK  VENDOR_ID
 ---------- -------------------------------------------------- ---------- ---------- ----------
-         1 2TB My Cloud Drive                                        195          5          1
-         2 1TB Portable Hard Drive                                    76          4          1
-         3 Live Media Player                                         119         15          1
-         4 2TB Desktop Drive                                          94         12          2
-         5 4TB NAS Drive                                              76          8          2
-         6 2TB Personal Storage                                      169          3          2
-         7 Samsung 970 EVO SSD                                       149         20          3
-         8 Samsung T7 Portable SSD                                    99          7          3
-         9 Sony 64GB SD Card                                          25          9          4
-        10 Sony 128GB SD Card                                         45         25          4
+      1001 Wireless Mouse                                          29.99         45        101
+      1002 USB-C Cable                                              12.5          5        101
+      1003 Mechanical Keyboard                                     89.99         22        101
+      1004 LED Monitor 24 inch                                    199.99         15        102
+      1005 Laptop Stand                                            34.99          8        102
+      1006 Webcam HD                                               59.99         30        102
+      1007 Desk Organizer                                          18.75         50        103
+      1008 Ergonomic Chair Mat                                        45         12        103
+      1009 Notebook Set                                            15.99          3        103
+      1010 Wireless Headset                                        79.99         18        101
 
 10 rows selected. 
 
@@ -65,7 +65,8 @@ SQL> select 'Vendor without products' as vendor_details, vendor_id
 
 VENDOR_DETAILS           VENDOR_ID
 ----------------------- ----------
-Vendor without products          5
+Vendor without products        104
+Vendor without products        105
 
 SQL> 
 SQL> -- products with stock < 10
@@ -79,14 +80,9 @@ SQL> SELECT PROD_NO,
 
    PROD_NO PROD_NAME                                          PROD_PRICE PROD_STOCK
 ---------- -------------------------------------------------- ---------- ----------
-         6 2TB Personal Storage                                      169          3
-         2 1TB Portable Hard Drive                                    76          4
-         1 2TB My Cloud Drive                                        195          5
-         8 Samsung T7 Portable SSD                                    99          7
-         5 4TB NAS Drive                                              76          8
-         9 Sony 64GB SD Card                                          25          9
-
-6 rows selected. 
+      1009 Notebook Set                                            15.99          3
+      1002 USB-C Cable                                              12.5          5
+      1005 Laptop Stand                                            34.99          8
 
 SQL> 
 SQL> set echo OFF
