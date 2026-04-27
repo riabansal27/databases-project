@@ -80,10 +80,16 @@
 <engineerTo>
 <item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
 </engineerTo>
+<constraintName>chk_road_surface</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="Asphalt" description=""/>
+<valueDef value="Concrete" description=""/>
+<valueDef value="Unsealed" description=""/>
+</listOfValues>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="num_lanes" id="957C00B7-FD0D-7F82-2D7B-0DE16FA0DC62">
