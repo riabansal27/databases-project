@@ -26,8 +26,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>100</dataTypePrecision>
-<ownDataTypeParameters>,100,</ownDataTypeParameters>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="collect_date" id="5884A3A1-E31A-B454-4528-8DD6B04C1848">
 <createdBy>riabansal</createdBy>
@@ -119,7 +119,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="bin_rfid1" id="5E9EC4FB-0C69-967C-10EA-57E5DA64268E">
 <createdBy>riabansal</createdBy>
@@ -135,7 +135,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT025</logicalDatatype>
 <dataTypeSize>24</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>24,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -143,8 +143,9 @@
 <createdBy>riabansal</createdBy>
 <createdTime>2026-04-27 10:16:26 UTC</createdTime>
 <ownerDesignName>ca_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
@@ -155,8 +156,9 @@
 <createdBy>riabansal</createdBy>
 <createdTime>2026-04-27 12:12:17 UTC</createdTime>
 <ownerDesignName>ca_logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="false"/>
 </engineerTo>
 <newElementsIDs>C2C11CEA-88E6-7C4E-BF0D-CECD9527A850,5884A3A1-E31A-B454-4528-8DD6B04C1848,D71952B9-4AE2-E490-CA2E-7C721C20EE02</newElementsIDs>
 <usedAttributes>
