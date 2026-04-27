@@ -1,0 +1,118 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5829291D-DAE8-05DA-C7D9-FFB31C80B4E7" name="LOCAL_AUTHORITY">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:40:20 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="auth_name" id="A7378C85-4C7B-1C4A-0093-14DD072AD6D4">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:40:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ceo_given_name" id="A5C17CEE-8EB6-EE8A-4E97-01DF65C30DC2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:42:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[Given name of the CEO]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ceo_fam_name" id="4B1BACDB-A8E5-4C59-48E0-01D4D04891C6">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:44:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[Family name of the CEO]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="auth_phone" id="16E011A5-80D7-CC03-E71E-259AE45E26D1">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:45:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contact phone number of the authority]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="auth_area" id="C56F6E7C-C5DE-92A1-5106-C5791A5827FF">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:45:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total area of the authority in square kilometres]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="auth_type" id="7F80624A-DD7F-9F2C-87B5-7FA0CE8DE658">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:46:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Type of local authority]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="94761A48-D9BF-19F5-7FED-6EC86D9749E9" name="LOCAL_AUTHORITY PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 09:41:15 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A7378C85-4C7B-1C4A-0093-14DD072AD6D4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

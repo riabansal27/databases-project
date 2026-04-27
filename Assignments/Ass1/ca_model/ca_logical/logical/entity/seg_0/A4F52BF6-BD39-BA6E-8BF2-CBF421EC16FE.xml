@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A4F52BF6-BD39-BA6E-8BF2-CBF421EC16FE" name="CONTRACT_WASTE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:02:43 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cont_no" id="FD139CFE-8DDA-C70F-E156-128D826EA463">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:02:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste_type_id" id="FF3066C0-6D2E-C82C-EAFE-EE41246D7265">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:03:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identifier for the waste type]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="coll_cost_per_kg" id="4991DE3A-F5C9-B86C-BA78-8E0264783967">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:03:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection cost per kilogram for this waste type under this contract]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="collection_frequency" id="18391EB1-504A-53BE-5882-6A008AB488C0">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:03:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[collection for this waste type under this contract]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0CAEF116-FA3E-ED2B-DCEC-F83753DEE734" name="CONTRACT_WASTE PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:03:02 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FD139CFE-8DDA-C70F-E156-128D826EA463</attributeRef>
+<attributeRef>FF3066C0-6D2E-C82C-EAFE-EE41246D7265</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

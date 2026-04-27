@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ECF0F568-8019-05ED-02DC-80D5FDEE7D32" name="TRUCK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:09:41 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="truck_vin" id="0EFEAA15-19C5-09D0-1A22-829F471B07D4">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:09:46 UTC</createdTime>
+<commentInRDBMS><![CDATA[Vehicle Identification Number of the truck]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="truck_rego" id="F972C64F-518D-C418-DD90-100550F0B36F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:10:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Registration number of the truck]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="truck_make" id="09EF83AC-38C2-BC6F-5EEA-31016D2DCF7C">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:10:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Make of the truck]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="truck_model" id="BB408922-07A4-6BA1-BBD3-434A5660D55A">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:11:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Model of the truck]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="truck_year" id="BF2D780D-6877-D09B-8F6E-7A544F68F46C">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:11:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[Year of manufacture of the truck]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A6C5B954-1832-9DA7-2E9E-5B1341441AED" name="TRUCK PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:10:11 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0EFEAA15-19C5-09D0-1A22-829F471B07D4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

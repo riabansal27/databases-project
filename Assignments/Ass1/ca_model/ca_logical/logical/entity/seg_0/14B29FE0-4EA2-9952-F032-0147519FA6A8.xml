@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="14B29FE0-4EA2-9952-F032-0147519FA6A8" name="CONTRACT">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:00:54 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cont_no" id="309E743B-50A8-AEA0-13EE-7006DE347E6E">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:01:04 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique contract number]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cont_start_date" id="344D09A2-B617-3F82-2F4F-970F1DBAC221">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:01:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Start date of the contract]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cont_end_date" id="0168D3DE-AF0B-42B0-4053-F63847F7E3C9">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:01:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[End date of the contract]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1F171705-B89C-7159-C8D5-9F6B8ED64C0B" name="CONTRACT PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 10:01:25 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>309E743B-50A8-AEA0-13EE-7006DE347E6E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
