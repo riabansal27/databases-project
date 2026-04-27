@@ -119,5 +119,19 @@
 <attributeRef>9A10D1B2-58ED-3171-812E-D9FD3C499559</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="03E9EE8D-3168-E78F-881D-2A655E17F730" name="PROPERTY_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:08:35 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<newElementsIDs>83935DB3-0ED5-7575-0F75-F0CD18015C64,C7ADE4F7-8147-0589-FAE7-25EB48555C1C,C33F0DE2-39F9-122E-5CB5-BBCAE678FF2E</newElementsIDs>
+<usedAttributes>
+<attributeRef>83935DB3-0ED5-7575-0F75-F0CD18015C64</attributeRef>
+<attributeRef>C7ADE4F7-8147-0589-FAE7-25EB48555C1C</attributeRef>
+<attributeRef>C33F0DE2-39F9-122E-5CB5-BBCAE678FF2E</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>

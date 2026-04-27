@@ -146,5 +146,19 @@
 <attributeRef>67434E91-B639-4BF7-4693-2BE2CCCC9F1A</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="AE280E76-51E7-3B5B-997B-5F6F99726B74" name="BIN_COLLECTION_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:12:17 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<newElementsIDs>C2C11CEA-88E6-7C4E-BF0D-CECD9527A850,5884A3A1-E31A-B454-4528-8DD6B04C1848,D71952B9-4AE2-E490-CA2E-7C721C20EE02</newElementsIDs>
+<usedAttributes>
+<attributeRef>C2C11CEA-88E6-7C4E-BF0D-CECD9527A850</attributeRef>
+<attributeRef>5884A3A1-E31A-B454-4528-8DD6B04C1848</attributeRef>
+<attributeRef>D71952B9-4AE2-E490-CA2E-7C721C20EE02</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>

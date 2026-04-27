@@ -132,5 +132,18 @@
 <attributeRef>5D6D47A0-1E26-2CB5-2F6F-09BFFDF0131D</attributeRef>
 </usedAttributes>
 </identifier>
+<identifier id="41E569DC-185B-BC04-09C0-15A762ABFECE" name="CONTRACT_WASTE_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:11:17 UTC</createdTime>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<newElementsIDs>FD139CFE-8DDA-C70F-E156-128D826EA463,FF3066C0-6D2E-C82C-EAFE-EE41246D7265</newElementsIDs>
+<usedAttributes>
+<attributeRef>FD139CFE-8DDA-C70F-E156-128D826EA463</attributeRef>
+<attributeRef>FF3066C0-6D2E-C82C-EAFE-EE41246D7265</attributeRef>
+</usedAttributes>
+</identifier>
 </identifiers>
 </Entity>
