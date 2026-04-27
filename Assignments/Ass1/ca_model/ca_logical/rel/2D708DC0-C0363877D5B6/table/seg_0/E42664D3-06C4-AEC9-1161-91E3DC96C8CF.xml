@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E42664D3-06C4-AEC9-1161-91E3DC96C8CF" name="PROPERTY_OWNER">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>F2B3895B-0F80-3498-47E4-00404FB5A814</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="owner_id" id="075ADA1B-200B-B54E-2CA5-B13B69F039BA">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Owner identifier]]></commentInRDBMS>
+<generatorID>B5D9F878-9540-E89F-B2DF-97AC5F719DBC</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_name" id="B41C25A5-5843-9606-59B7-E056B650F0B2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority]]></commentInRDBMS>
+<generatorID>1B835099-89F6-2F79-10A9-681468F5F04B</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_id" id="7EECA418-B52D-93B9-CC05-C69D9BEE84CD">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street identifier]]></commentInRDBMS>
+<generatorID>7B532EF6-9AF5-9F14-5DE1-C8D467A2F351</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_no" id="6CCB3E9A-A82F-8CAE-FD68-3F585634ECEC">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street number of the property]]></commentInRDBMS>
+<generatorID>EF037D15-767E-CD7A-72EF-2D3D5D7B50E0</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="po_id" id="867D1D40-59EC-0314-163A-4C43ADB74F3C">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property owner]]></commentInRDBMS>
+<generatorID>EE86B32E-DE14-3A5F-C84F-B2CA235E75F2</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_id" id="DA617D90-B6FB-B68D-CDFE-4533491DE649">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property]]></commentInRDBMS>
+<generatorID>27D711EF-182C-D486-EA97-6C9B20490C24</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8328AA18-0484-4BCE-24F8-ED8FC19B09AC" referredColumn="774F9DF6-E441-6B47-2965-1B2C55572438"/>
+</associations>
+</Column>
+<Column name="owner_id1" id="A53FE691-41EA-C242-EC93-9CFFB2C7E0FC">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for the owner]]></commentInRDBMS>
+<generatorID>A1CDC25B-28E9-8446-F38B-911B82DCCD98</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4D86EE2B-B6F5-ACB9-DB2C-089C82895A68" referredColumn="4B90C15C-35FA-E761-52E0-3097D4CE2D21"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88831BE8-42CC-5054-972B-1751A30E6B77" name="PROPERTY_OWNER_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>DA7F7D33-3470-6BB4-D1D8-30ED21260CAD</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="867D1D40-59EC-0314-163A-4C43ADB74F3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2286EDAD-22CE-540D-0523-73C7F3F5D683" name="PROPERTY_OWNER_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>25133795-2C9C-BECC-8C78-9852AB5D0140</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="075ADA1B-200B-B54E-2CA5-B13B69F039BA"/>
+<colUsage columnID="B41C25A5-5843-9606-59B7-E056B650F0B2"/>
+<colUsage columnID="7EECA418-B52D-93B9-CC05-C69D9BEE84CD"/>
+<colUsage columnID="6CCB3E9A-A82F-8CAE-FD68-3F585634ECEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4348429-800A-D70B-F454-34E9F8B782D3" name="owner_property_owner_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>9FBD0F9C-C8A5-2876-8251-CB80791FB651</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A53FE691-41EA-C242-EC93-9CFFB2C7E0FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66C26A0C-89B1-CBFE-AB9A-2975D32CBF50" name="property_property_owner_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>BD1BA573-350C-37B0-EBC4-17AE10B582E9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA617D90-B6FB-B68D-CDFE-4533491DE649"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D7C7934F-1889-A059-3CCD-A098359EAC9D" name="BIN_TYPE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>96680A7F-88DB-863A-2099-873E44B817CE</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="waste_type_id" id="638B4316-9C5F-92F3-E37A-F7C19132AA1C">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identifier for the waste type]]></commentInRDBMS>
+<generatorID>52661071-FC20-BCCF-265B-AF338CAB981B</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bin_size" id="C8209D0C-7727-4462-ADEB-ADFF9700B660">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Size of the bin in litres]]></commentInRDBMS>
+<generatorID>10C3B391-D223-C70D-EE54-EAB0AFD610E5</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="std_supply_cost" id="36A9DBC0-6EEB-1767-E25B-72363D56F7AF">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Standard supply cost for this bin type and size]]></commentInRDBMS>
+<generatorID>B7F8B940-59BE-5C86-EA49-D8C7E6B12B7C</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BAD8680-713A-E8CF-45BE-C902FCA1847F" name="BIN_TYPE_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>E5E797EA-3C05-8406-01CA-1F7205F73087</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="638B4316-9C5F-92F3-E37A-F7C19132AA1C"/>
+<colUsage columnID="C8209D0C-7727-4462-ADEB-ADFF9700B660"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

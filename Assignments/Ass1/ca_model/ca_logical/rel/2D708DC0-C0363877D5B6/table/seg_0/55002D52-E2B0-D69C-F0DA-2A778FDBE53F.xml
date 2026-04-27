@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="55002D52-E2B0-D69C-F0DA-2A778FDBE53F" name="CONTRACT">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>14B29FE0-4EA2-9952-F032-0147519FA6A8</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cont_no" id="3D1BC751-1F97-C937-EFA4-2503E842A945">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique contract number]]></commentInRDBMS>
+<generatorID>309E743B-50A8-AEA0-13EE-7006DE347E6E</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cont_start_date" id="3CFCAE51-A73C-7282-DB45-EA1D97698225">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Start date of the contract]]></commentInRDBMS>
+<generatorID>344D09A2-B617-3F82-2F4F-970F1DBAC221</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cont_end_date" id="ED5A4A85-5E21-F406-986D-E5072F1E0A1B">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[End date of the contract]]></commentInRDBMS>
+<generatorID>0168D3DE-AF0B-42B0-4053-F63847F7E3C9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_name" id="93B223D0-5C35-C075-6818-C67BC34F3650">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<generatorID>2AA53927-A3AE-CAFC-D9BA-CFB5455CE375</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3FBEF4FC-AB80-E9C0-D1FA-29F600A6B6A7" referredColumn="3E2F6819-4842-5614-5553-B6D1B59AEE87"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3BCB3FCC-3858-1F13-7C4B-F19CF9335113" name="CONTRACT_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>1F171705-B89C-7159-C8D5-9F6B8ED64C0B</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3D1BC751-1F97-C937-EFA4-2503E842A945"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72962F73-C671-3494-4472-38A8A54B69D3" name="local_authority_contract_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>60AED7D0-A3B5-1A5D-BD37-94A3E0DD86DD</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93B223D0-5C35-C075-6818-C67BC34F3650"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D9E8E85-3704-435C-725F-D82D1461D259" name="LOCAL_AUTHORITY">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>5829291D-DAE8-05DA-C7D9-FFB31C80B4E7</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="auth_name" id="3E2F6819-4842-5614-5553-B6D1B59AEE87">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<generatorID>A7378C85-4C7B-1C4A-0093-14DD072AD6D4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ceo_given_name" id="9F0CE9F7-B995-581B-6E3F-E53FB54BF129">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Given name of the CEO]]></commentInRDBMS>
+<generatorID>A5C17CEE-8EB6-EE8A-4E97-01DF65C30DC2</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ceo_fam_name" id="3C36F6E2-8E8B-5F54-B9B1-DC98CFB36A8E">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Family name of the CEO]]></commentInRDBMS>
+<generatorID>4B1BACDB-A8E5-4C59-48E0-01D4D04891C6</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_phone" id="9F5FC2AC-07D1-9630-E361-FCB60A8994F2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contact phone number of the authority]]></commentInRDBMS>
+<generatorID>16E011A5-80D7-CC03-E71E-259AE45E26D1</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_area" id="E807E650-AAAC-D775-B50E-15E29E22FC91">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Total area of the authority in square kilometres]]></commentInRDBMS>
+<generatorID>C56F6E7C-C5DE-92A1-5106-C5791A5827FF</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_type" id="945802C8-7998-35D1-2CB3-02994D1EA999">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Type of local authority]]></commentInRDBMS>
+<generatorID>7F80624A-DD7F-9F2C-87B5-7FA0CE8DE658</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<constraintName>chk_auth_type</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="Borough" description=""/>
+<valueDef value="City" description=""/>
+<valueDef value="District Council" description=""/>
+<valueDef value="Shire" description=""/>
+<valueDef value="Town" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9FAAA57B-53BE-4325-394E-4B71A4B38B53" name="LOCAL_AUTHORITY_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>94761A48-D9BF-19F5-7FED-6EC86D9749E9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E2F6819-4842-5614-5553-B6D1B59AEE87"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

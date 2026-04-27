@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EE5AA819-AA0C-4F20-5C33-D9091F62F165" name="STREET">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>D0D8C9D6-2D15-7830-467E-5E221AC47252</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="auth_name" id="A6FD66DA-ADB1-7EC1-2D63-EF2EAFFBA2FE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority]]></commentInRDBMS>
+<generatorID>EB3806C6-FBCE-8D24-CB6A-FFD05F59FE4A</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_id" id="505C34F1-D0A9-0B88-DB24-8A5C37C46D1D">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[treet identifier within the local authority]]></commentInRDBMS>
+<generatorID>A611F11C-CC47-26E5-F008-2FC2BDFC3C33</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_name" id="EA86C87A-99CB-8AEE-575C-8E8DA8A2B73A">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[name of street]]></commentInRDBMS>
+<generatorID>10187398-FD27-75D3-050F-0607FBD34167</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_length" id="45F180E2-2FF1-42B3-CD80-52A5B10C549F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Length of the street in meters]]></commentInRDBMS>
+<generatorID>16D0FF44-9B7D-D1DD-C326-035024F03DD7</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="road_surface" id="A8CA4B68-4C59-0FC9-F41C-F0457825024F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Type of road surface]]></commentInRDBMS>
+<generatorID>24D3B127-66F0-6D78-BA2C-629B5E17F6F5</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<constraintName>chk_road_surface</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<listOfValues>
+<valueDef value="Asphalt" description=""/>
+<valueDef value="Concrete" description=""/>
+<valueDef value="Unsealed" description=""/>
+</listOfValues>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="num_lanes" id="B46C46EF-319B-E06E-2ACB-1F5227E4C683">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Number of lanes on the street]]></commentInRDBMS>
+<generatorID>957C00B7-FD0D-7F82-2D7B-0DE16FA0DC62</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_name1" id="237B678B-8257-C5A1-60EA-346DDA9B47BA">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<generatorID>F3C9AF65-2464-516D-0B68-F74BD52740A4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FF7CADAF-AA03-31E2-6419-445BA280BA42" referredColumn="3E2F6819-4842-5614-5553-B6D1B59AEE87"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C17B08FE-CB75-AB37-69EC-977C5DFBC989" name="STREET_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>05B402F6-D915-A6B8-E02D-E012FE4E4F8D</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6FD66DA-ADB1-7EC1-2D63-EF2EAFFBA2FE"/>
+<colUsage columnID="237B678B-8257-C5A1-60EA-346DDA9B47BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="274EFF7D-5374-C760-5BDE-903CBBED77EE" name="local_authority_street_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>7AD52284-84C5-AE87-6347-D24AE6822537</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="237B678B-8257-C5A1-60EA-346DDA9B47BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

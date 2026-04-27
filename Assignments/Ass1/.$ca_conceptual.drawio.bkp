@@ -630,6 +630,9 @@
             <mxPoint x="-4" y="4" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="T6_uUJcrkE0ehVEMzsKH-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=22;fontStyle=4" value="CONCEPTUAL MODEL" vertex="1">
+          <mxGeometry height="30" width="390" x="228" y="10" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F8A3919D-8C41-E0A8-7569-B0B603A00F27" containerWithKeyObject="BDE9145F-69ED-3C0B-1485-0899872716C0" localFKIndex="7E366028-243E-D00E-FD3E-75255D2E46AA" name="contract_contract_waste_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>29BC5EC9-E53E-1FC1-A944-7F9EDDBB55C4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<referredTableLongName>CONTRACT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>55002D52-E2B0-D69C-F0DA-2A778FDBE53F</referredTableID>
+<keyObject>3BCB3FCC-3858-1F13-7C4B-F19CF9335113</keyObject>
+<referredKeyID>3BCB3FCC-3858-1F13-7C4B-F19CF9335113</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>cont_no</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

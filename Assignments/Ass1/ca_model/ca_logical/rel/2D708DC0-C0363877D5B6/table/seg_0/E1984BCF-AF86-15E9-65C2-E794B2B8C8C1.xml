@@ -1,0 +1,117 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E1984BCF-AF86-15E9-65C2-E794B2B8C8C1" name="COLLECTION">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>BC877ED4-FA72-2972-EEB9-3F0B401079CE</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cont_no" id="E663C2B8-013D-5D17-AA80-C811DAA9959B">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number for this collection run]]></commentInRDBMS>
+<generatorID>5E7C2D41-A1C4-F752-C3C9-EDFD1169CD50</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="collect_date" id="06226F34-FEDF-61E0-F18E-07C25205F232">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of the collection run]]></commentInRDBMS>
+<generatorID>D5244F3F-C321-C52F-BE91-E8DF4F192F2A</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="truck_vin" id="ACBC700C-F738-4ABF-1F00-03E2CA34B41A">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[VIN of the truck used for this collection run]]></commentInRDBMS>
+<generatorID>4E49E4DF-C8C4-8303-2799-3C720BADE851</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coll_id" id="C71ABEF3-1887-63EE-9B76-BE3A28D7F8B9">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for collection run]]></commentInRDBMS>
+<generatorID>6D06F7C0-22F9-A9CC-C9CC-CA0919A95FF4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="truck_vin1" id="C6F16ACA-E991-5016-47E7-01E4531FAE8F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Vehicle Identification Number of the truck]]></commentInRDBMS>
+<generatorID>4BC63ADF-C34E-31E3-9EF1-756D4AB6B34E</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2556A009-ED06-B1A6-AB9F-9813E57DC666" referredColumn="E24A5F2F-4F36-3185-99D8-EA62C937F25B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EC3B24C7-7D90-8BD3-A6EF-44574FF39569" name="COLLECTION_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>FA9DE619-336C-7E07-07E4-F2D2E1CADBD5</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C71ABEF3-1887-63EE-9B76-BE3A28D7F8B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF916BA5-885D-55BF-F6E7-5141EDCAEDA1" name="COLLECTION_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>8E34CE05-26B7-E751-5515-9B632904F0D0</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E663C2B8-013D-5D17-AA80-C811DAA9959B"/>
+<colUsage columnID="06226F34-FEDF-61E0-F18E-07C25205F232"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0FE59A1D-A6DC-AD61-1649-77899B131A6F" name="truck_collection_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>E8482483-DFE1-F665-0B0E-712D260ECCFD</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C6F16ACA-E991-5016-47E7-01E4531FAE8F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

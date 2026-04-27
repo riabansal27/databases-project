@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BDE9145F-69ED-3C0B-1485-0899872716C0" name="CONTRACT_WASTE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>A4F52BF6-BD39-BA6E-8BF2-CBF421EC16FE</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cont_no" id="A16703B1-CA72-9CCE-66B6-7273EA42FBE5">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number]]></commentInRDBMS>
+<generatorID>FD139CFE-8DDA-C70F-E156-128D826EA463</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_type_id" id="9F9530E5-5901-9431-758F-D2052999E361">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identifier for the waste type]]></commentInRDBMS>
+<generatorID>FF3066C0-6D2E-C82C-EAFE-EE41246D7265</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coll_cost_per_kg" id="C768E52C-7CBE-B774-0F87-BB31BF10346D">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Collection cost per kilogram for this waste type under this contract]]></commentInRDBMS>
+<generatorID>4991DE3A-F5C9-B86C-BA78-8E0264783967</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="collection_frequency" id="5E2D4312-93C5-99CC-47B9-511ACDA10C90">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[collection for this waste type under this contract]]></commentInRDBMS>
+<generatorID>18391EB1-504A-53BE-5882-6A008AB488C0</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cw_id" id="A8371D21-2DF7-7831-7AE5-591479D1ADC2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract waste]]></commentInRDBMS>
+<generatorID>5D6D47A0-1E26-2CB5-2F6F-09BFFDF0131D</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cont_no1" id="77E72F99-2D7B-1543-AA62-102166720466">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique contract number]]></commentInRDBMS>
+<generatorID>563CBA57-A480-E615-E637-D31ECD53B7F2</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F8A3919D-8C41-E0A8-7569-B0B603A00F27" referredColumn="3D1BC751-1F97-C937-EFA4-2503E842A945"/>
+</associations>
+</Column>
+<Column name="waste_type_id1" id="FBE44B1E-27E3-56F5-3766-5C382D465D0E">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for the waste type]]></commentInRDBMS>
+<generatorID>C98B3AAC-F3F2-2331-9FB0-90DAEFA07404</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F4A565C1-E004-433A-3465-1835C318E315" referredColumn="5FF4040C-F415-C689-051A-7554BFE20106"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9BAA529B-1E6D-986D-F6FC-807EAE51CD94" name="CONTRACT_WASTE_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>0CAEF116-FA3E-ED2B-DCEC-F83753DEE734</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8371D21-2DF7-7831-7AE5-591479D1ADC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F814EBF2-18F3-EA2E-D521-A05510A34946" name="CONTRACT_WASTE_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>41E569DC-185B-BC04-09C0-15A762ABFECE</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A16703B1-CA72-9CCE-66B6-7273EA42FBE5"/>
+<colUsage columnID="9F9530E5-5901-9431-758F-D2052999E361"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E366028-243E-D00E-FD3E-75255D2E46AA" name="contract_contract_waste_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>29BC5EC9-E53E-1FC1-A944-7F9EDDBB55C4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77E72F99-2D7B-1543-AA62-102166720466"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9771077-1A6D-A949-C15E-3231117A0B51" name="waste_type_contract_waste_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>07C1F896-A99E-6A0E-D530-B540C417268E</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBE44B1E-27E3-56F5-3766-5C382D465D0E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

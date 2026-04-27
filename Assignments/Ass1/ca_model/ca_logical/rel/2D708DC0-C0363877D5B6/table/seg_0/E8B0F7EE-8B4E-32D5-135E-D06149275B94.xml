@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E8B0F7EE-8B4E-32D5-135E-D06149275B94" name="BIN">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>A0108F67-84FE-A326-DF3F-7F3E8174233D</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bin_rfid" id="77270765-73D9-855D-18F7-D543DFBC0EAB">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique RFID tag identifier for the bin (EPC Gen2 standard, 24 hex characters)]]></commentInRDBMS>
+<generatorID>1B4A0C30-0A66-9125-11BB-B5401F3B61AC</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>24</dataTypeSize>
+<ownDataTypeParameters>24,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="supply_date" id="D1A09E93-48F6-DAF9-5253-2BD920913649">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date the bin was supplied to the property]]></commentInRDBMS>
+<generatorID>C4EFCD4C-921B-F584-6DBB-709F39C79362</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="replacement_reason" id="64B2BD4B-C1C7-EC9D-2A2B-0FAD588ED242">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Reason for bin replacement if applicable]]></commentInRDBMS>
+<generatorID>2758161D-DE2F-29CB-8C52-2110FF510D14</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<constraintName>chk_replacement_reason</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<listOfValues>
+<valueDef value="Bin failure" description=""/>
+<valueDef value="Damaged by owner" description=""/>
+<valueDef value="Damaged during pickup of waste" description=""/>
+<valueDef value="Stolen" description=""/>
+</listOfValues>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cbs_id" id="41B12CC1-17ED-88C9-E7A2-B6540BB284BE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract bin supply]]></commentInRDBMS>
+<generatorID>BCCB1F19-EB8C-4D94-A193-996F81B35E18</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="37BB5DA1-31C6-56E5-1E85-0D1808B0D045" referredColumn="F0108DAA-5E7A-FEF5-DC20-0F843DFDB0DE"/>
+</associations>
+</Column>
+<Column name="prop_id" id="F2994F84-8AD5-9D5C-8971-3F58A088C83F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property]]></commentInRDBMS>
+<generatorID>3A425726-7AF4-DDD2-836B-1A8976C6B012</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E5F6E99F-054E-7BF8-719A-745939F970E3" referredColumn="774F9DF6-E441-6B47-2965-1B2C55572438"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C439D36B-C5A3-8BD0-1BA8-86EE5C3C062C" name="BIN_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>F41F2730-CA79-45BD-9741-CC0D53676021</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77270765-73D9-855D-18F7-D543DFBC0EAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC7437A8-F266-238C-0494-A8A64A07A01C" name="contract_bin_supply_bin_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>5217189A-3D68-EC3D-3F72-A9976B5BCCD9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41B12CC1-17ED-88C9-E7A2-B6540BB284BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="57FD2A07-1448-3339-0EB4-C737A3566B29" name="property_bin_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>B09C135F-4120-535A-0157-12C77F3A0053</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F2994F84-8AD5-9D5C-8971-3F58A088C83F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

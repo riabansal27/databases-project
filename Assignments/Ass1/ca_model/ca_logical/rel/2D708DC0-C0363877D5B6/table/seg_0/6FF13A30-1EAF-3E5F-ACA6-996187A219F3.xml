@@ -1,0 +1,166 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6FF13A30-1EAF-3E5F-ACA6-996187A219F3" name="CONTRACT_BIN_SUPPLY">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>D9DD8C5C-CD0F-477A-5CDD-455E50DC7BF3</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cont_no" id="79062DEA-0A4E-1631-00DB-9887EA59416D">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number]]></commentInRDBMS>
+<generatorID>60B0FCE5-FFC9-ABEC-E6C5-3B771BB9BE71</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="waste_type_id" id="801E35A9-2FDB-C668-F2B1-789F14391035">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<comment><![CDATA[Identifier for the waste type]]></comment>
+<generatorID>E3F14DEE-8659-7239-4EE7-59B1C7286AC0</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bin_size" id="FA49164C-EA10-D610-A137-E2C1CEF18ABC">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<comment><![CDATA[Size of the bin in litres]]></comment>
+<generatorID>6BA88D2F-8E81-DBF7-62CB-F565EBE4CE5B</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cont_supply_cost" id="AADF4717-1A83-A77F-F527-CD8C54037DEE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<comment><![CDATA[Supply cost of the bin under this contract]]></comment>
+<generatorID>829905FA-934D-EF16-B123-05D34E87C4F3</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cbs_id" id="F0108DAA-5E7A-FEF5-DC20-0F843DFDB0DE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract bin supply]]></commentInRDBMS>
+<generatorID>F87BDA83-FD05-C754-5E77-A408A051572B</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cw_id" id="033B308A-5075-3890-64A1-7856557F8410">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract waste]]></commentInRDBMS>
+<generatorID>BC1B367E-8608-1725-D4CC-5680CB643FB4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F39E7FB7-A30C-D64D-F5A5-43AA18678DA3" referredColumn="A8371D21-2DF7-7831-7AE5-591479D1ADC2"/>
+</associations>
+</Column>
+<Column name="waste_type_id1" id="4A86A7C7-197D-E3F1-9AA7-13E2E7A9D6BE">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identifier for the waste type]]></commentInRDBMS>
+<generatorID>4F17ACC4-3695-428D-051F-1F432691CE99</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B079A32-95C5-C224-958F-F74478115EEB" referredColumn="638B4316-9C5F-92F3-E37A-F7C19132AA1C"/>
+</associations>
+</Column>
+<Column name="bin_size1" id="F18895DA-B3CA-1511-D469-C28D1D0DBF92">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Size of the bin in litres]]></commentInRDBMS>
+<generatorID>42901403-B154-535E-B7EA-48E0BC5FC352</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B079A32-95C5-C224-958F-F74478115EEB" referredColumn="C8209D0C-7727-4462-ADEB-ADFF9700B660"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="048D9514-F571-C220-583E-E7130F9FD0EC" name="CONTRACT_BIN_SUPPLY_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>CDF8B98F-7EBB-D651-F04E-FF577E04920A</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0108DAA-5E7A-FEF5-DC20-0F843DFDB0DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="03A8684B-E8BD-2345-4B33-E0187A4279AB" name="bin_type_cbs_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>AF748002-AE79-4663-6D97-5174F63252A6</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A86A7C7-197D-E3F1-9AA7-13E2E7A9D6BE"/>
+<colUsage columnID="F18895DA-B3CA-1511-D469-C28D1D0DBF92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B5EBB4D-9E8C-778A-A7A1-95B843394505" name="contract_waste_bin_supply_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>47B30A25-34FD-7BD2-563F-9444CE2E5588</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="033B308A-5075-3890-64A1-7856557F8410"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

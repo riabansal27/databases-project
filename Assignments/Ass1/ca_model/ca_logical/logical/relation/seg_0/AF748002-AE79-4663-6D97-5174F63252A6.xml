@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="bin_type_contract_bin_supply_fk" directorySegmentName="seg_0" id="AF748002-AE79-4663-6D97-5174F63252A6">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="bin_type_cbs_fk" directorySegmentName="seg_0" id="AF748002-AE79-4663-6D97-5174F63252A6">
 <createdBy>riabansal</createdBy>
 <createdTime>2026-04-27 11:50:43 UTC</createdTime>
 <ownerDesignName>ca_logical</ownerDesignName>
@@ -9,6 +9,7 @@
 <sourcePk>E5E797EA-3C05-8406-01CA-1F7205F73087</sourcePk>
 <identifying>false</identifying>
 <nameOnSource>included in</nameOnSource>
+<nameOnTarget> </nameOnTarget>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

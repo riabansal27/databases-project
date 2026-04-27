@@ -9,6 +9,7 @@
 <sourcePk>7C3A36E8-15E4-F911-96A3-55C2E892E6D3</sourcePk>
 <identifying>false</identifying>
 <nameOnSource>has</nameOnSource>
+<nameOnTarget> </nameOnTarget>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

@@ -1,0 +1,139 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8E816AD9-F9F4-8C14-C232-4E932583AF50" name="PROPERTY">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>4A0A1E90-22A5-8692-2EC6-CCBCCE88433D</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="auth_name" id="38E90A59-469A-0A3A-3F86-E4E59D2EDFCB">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority]]></commentInRDBMS>
+<generatorID>83935DB3-0ED5-7575-0F75-F0CD18015C64</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_id" id="4A870D5E-E821-1EF2-12F9-C1772685B95F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street identifier]]></commentInRDBMS>
+<generatorID>C7ADE4F7-8147-0589-FAE7-25EB48555C1C</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="street_no" id="779E43FD-2B7D-DDE3-5907-E5AEEB7661E4">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Street number of the property]]></commentInRDBMS>
+<generatorID>C33F0DE2-39F9-122E-5CB5-BBCAE678FF2E</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prop_id" id="774F9DF6-E441-6B47-2965-1B2C55572438">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property]]></commentInRDBMS>
+<generatorID>9A10D1B2-58ED-3171-812E-D9FD3C499559</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="auth_name1" id="2DFC3E4E-A8D5-1640-F8E6-047DB7E3FEA0">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority]]></commentInRDBMS>
+<generatorID>E8E8A388-5592-3283-B602-18B242916E58</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43208AE0-4BDE-FDB2-5D01-4B5165676C79" referredColumn="A6FD66DA-ADB1-7EC1-2D63-EF2EAFFBA2FE"/>
+</associations>
+</Column>
+<Column name="auth_name11" id="1CDA7E25-E312-8FCD-ACA9-2B4FCAFA880E">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<generatorID>E5AC9F9E-4183-F182-9C7B-330FED69F2AB</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43208AE0-4BDE-FDB2-5D01-4B5165676C79" referredColumn="237B678B-8257-C5A1-60EA-346DDA9B47BA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1709BA6C-E306-D073-C049-8F615026D955" name="PROPERTY_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>7C3A36E8-15E4-F911-96A3-55C2E892E6D3</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="774F9DF6-E441-6B47-2965-1B2C55572438"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FDE4C366-A491-E41D-8241-EB81ED9C474F" name="PROPERTY_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>03E9EE8D-3168-E78F-881D-2A655E17F730</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38E90A59-469A-0A3A-3F86-E4E59D2EDFCB"/>
+<colUsage columnID="4A870D5E-E821-1EF2-12F9-C1772685B95F"/>
+<colUsage columnID="779E43FD-2B7D-DDE3-5907-E5AEEB7661E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="67E2A393-24DA-4F42-59CD-4EC1F925447E" name="street_property_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>1DB9106E-AE70-2031-8198-9FBDB0A2E7B4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2DFC3E4E-A8D5-1640-F8E6-047DB7E3FEA0"/>
+<colUsage columnID="1CDA7E25-E312-8FCD-ACA9-2B4FCAFA880E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

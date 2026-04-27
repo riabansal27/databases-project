@@ -1,0 +1,179 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1537D98-D2A7-5FCE-02AB-7FA0DE7120B0" name="BIN_COLLECTION">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>EEA409CC-5EE7-78E5-A14D-9F55788DFCBF</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cont_no" id="150DC38B-8C21-67C5-CA7A-7F0BE23000EB">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Contract number]]></commentInRDBMS>
+<generatorID>C2C11CEA-88E6-7C4E-BF0D-CECD9527A850</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>100</dataTypePrecision>
+<ownDataTypeParameters>,100,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="collect_date" id="6BE8F200-0DBA-2936-E523-6C2D8C31350E">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Date of collection]]></commentInRDBMS>
+<generatorID>5884A3A1-E31A-B454-4528-8DD6B04C1848</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bin_rfid" id="F1AA16E2-676B-B187-26EE-00ABC78C98E2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[RFID tag of the bin collected]]></commentInRDBMS>
+<generatorID>D71952B9-4AE2-E490-CA2E-7C721C20EE02</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>24</dataTypeSize>
+<ownDataTypeParameters>24,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="collected_kgs" id="428B80BD-91CA-1273-75EA-C2285681AF9C">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Weight of waste collected in kilograms]]></commentInRDBMS>
+<generatorID>C2D3E4D4-9ED5-960B-16FA-48DC0737A2C4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="overweight" id="9789B723-CEF2-2ED8-159B-F65D6D2885CB">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Flag indicating if bin was overweight Y or N]]></commentInRDBMS>
+<generatorID>FA129807-EC69-B5E1-6F16-2262C8E83813</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<constraintName>chk_overweight</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="N" description=""/>
+<valueDef value="Y" description=""/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bc_id" id="C68DDE0E-146A-73A5-ECF9-FD0243C7C29F">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for bin collection]]></commentInRDBMS>
+<generatorID>67434E91-B639-4BF7-4693-2BE2CCCC9F1A</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="coll_id" id="B7FD3801-5013-B366-59BC-06A56BAFB8A9">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for collection run]]></commentInRDBMS>
+<generatorID>086F722B-3625-C222-8E01-AB445C0A4214</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A7DCDFA-466A-46EF-5280-4B169D814D0D" referredColumn="C71ABEF3-1887-63EE-9B76-BE3A28D7F8B9"/>
+</associations>
+</Column>
+<Column name="bin_rfid1" id="06DFBB9D-A09B-71A0-E50E-ECC3F9EB37B2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique RFID tag identifier for the bin (EPC Gen2 standard, 24 hex characters)]]></commentInRDBMS>
+<generatorID>5E9EC4FB-0C69-967C-10EA-57E5DA64268E</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>24</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AF475B5-2258-0F71-4AFC-F0941644FA2A" referredColumn="77270765-73D9-855D-18F7-D543DFBC0EAB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="632A40FE-AA22-E137-02B8-6EEDAFB7BFC3" name="BIN_COLLECTION_PK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>E30AA847-6054-266E-8AD9-CE1FF888B476</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C68DDE0E-146A-73A5-ECF9-FD0243C7C29F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD4B138B-546E-81B9-ED5E-425C0B1118EC" name="BIN_COLLECTION_NK">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>AE280E76-51E7-3B5B-997B-5F6F99726B74</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="150DC38B-8C21-67C5-CA7A-7F0BE23000EB"/>
+<colUsage columnID="6BE8F200-0DBA-2936-E523-6C2D8C31350E"/>
+<colUsage columnID="F1AA16E2-676B-B187-26EE-00ABC78C98E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5B31A054-8511-84A1-ED0B-408F6D9708CD" name="bin_bin_collection_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>466C1A51-05A7-0DED-0311-2C19DFCF37BF</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06DFBB9D-A09B-71A0-E50E-ECC3F9EB37B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D172C8D7-1ED0-3E4D-36F7-A16678DEB90F" name="collection_bin_collection_fk">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 12:29:59 UTC</createdTime>
+<generatorID>F5D0AB66-E332-DB5C-EBD1-D7D64616BED9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7FD3801-5013-B366-59BC-06A56BAFB8A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
