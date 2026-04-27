@@ -86,6 +86,54 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cw_id" id="BC1B367E-8608-1725-D4CC-5680CB643FB4">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:50:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract waste]]></commentInRDBMS>
+<generatorID>47B30A25-34FD-7BD2-563F-9444CE2E5588</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>5D6D47A0-1E26-2CB5-2F6F-09BFFDF0131D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste_type_id1" id="4F17ACC4-3695-428D-051F-1F432691CE99">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:50:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Identifier for the waste type]]></commentInRDBMS>
+<generatorID>AF748002-AE79-4663-6D97-5174F63252A6</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>52661071-FC20-BCCF-265B-AF338CAB981B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bin_size1" id="42901403-B154-535E-B7EA-48E0BC5FC352">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:50:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[Size of the bin in litres]]></commentInRDBMS>
+<generatorID>AF748002-AE79-4663-6D97-5174F63252A6</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>10C3B391-D223-C70D-EE54-EAB0AFD610E5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CDF8B98F-7EBB-D651-F04E-FF577E04920A" name="CONTRACT_BIN_SUPPLY PK">

@@ -71,6 +71,40 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="auth_name1" id="E8E8A388-5592-3283-B602-18B242916E58">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:45:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority]]></commentInRDBMS>
+<generatorID>1DB9106E-AE70-2031-8198-9FBDB0A2E7B4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>EB3806C6-FBCE-8D24-CB6A-FFD05F59FE4A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="auth_name11" id="E5AC9F9E-4183-F182-9C7B-330FED69F2AB">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:45:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<generatorID>1DB9106E-AE70-2031-8198-9FBDB0A2E7B4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>F3C9AF65-2464-516D-0B68-F74BD52740A4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7C3A36E8-15E4-F911-96A3-55C2E892E6D3" name="PROPERTY PK">

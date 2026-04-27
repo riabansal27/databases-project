@@ -86,6 +86,38 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cont_no1" id="563CBA57-A480-E615-E637-D31ECD53B7F2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:47:34 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique contract number]]></commentInRDBMS>
+<generatorID>29BC5EC9-E53E-1FC1-A944-7F9EDDBB55C4</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>309E743B-50A8-AEA0-13EE-7006DE347E6E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="waste_type_id1" id="C98B3AAC-F3F2-2331-9FB0-90DAEFA07404">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:49:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for the waste type]]></commentInRDBMS>
+<generatorID>07C1F896-A99E-6A0E-D530-B540C417268E</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>223520DB-20A3-68AB-A14C-94399A8556AB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0CAEF116-FA3E-ED2B-DCEC-F83753DEE734" name="CONTRACT_WASTE PK">

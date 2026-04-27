@@ -85,6 +85,38 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="prop_id" id="27D711EF-182C-D486-EA97-6C9B20490C24">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:56:26 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property]]></commentInRDBMS>
+<generatorID>BD1BA573-350C-37B0-EBC4-17AE10B582E9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>9A10D1B2-58ED-3171-812E-D9FD3C499559</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="owner_id1" id="A1CDC25B-28E9-8446-F38B-911B82DCCD98">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:57:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for the owner]]></commentInRDBMS>
+<generatorID>9FBD0F9C-C8A5-2876-8251-CB80791FB651</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>9AED4ED5-148F-1E9E-00EB-8006E3A32965</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="DA7F7D33-3470-6BB4-D1D8-30ED21260CAD" name="PROPERTY_OWNER PK">

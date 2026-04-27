@@ -55,6 +55,22 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="auth_name" id="2AA53927-A3AE-CAFC-D9BA-CFB5455CE375">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:43:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of the local authority, must be unique: authority name]]></commentInRDBMS>
+<generatorID>60AED7D0-A3B5-1A5D-BD37-94A3E0DD86DD</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>A7378C85-4C7B-1C4A-0093-14DD072AD6D4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1F171705-B89C-7159-C8D5-9F6B8ED64C0B" name="CONTRACT PK">

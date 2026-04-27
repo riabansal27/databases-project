@@ -70,6 +70,22 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="truck_vin1" id="4BC63ADF-C34E-31E3-9EF1-756D4AB6B34E">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:58:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Vehicle Identification Number of the truck]]></commentInRDBMS>
+<generatorID>E8482483-DFE1-F665-0B0E-712D260ECCFD</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>0EFEAA15-19C5-09D0-1A22-829F471B07D4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="FA9DE619-336C-7E07-07E4-F2D2E1CADBD5" name="COLLECTION PK">

@@ -57,6 +57,39 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cbs_id" id="BCCB1F19-EB8C-4D94-A193-996F81B35E18">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:54:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract bin supply]]></commentInRDBMS>
+<generatorID>5217189A-3D68-EC3D-3F72-A9976B5BCCD9</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<referedAttribute>F87BDA83-FD05-C754-5E77-A408A051572B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prop_id" id="3A425726-7AF4-DDD2-836B-1A8976C6B012">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:54:53 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property]]></commentInRDBMS>
+<generatorID>B09C135F-4120-535A-0157-12C77F3A0053</generatorID>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9A10D1B2-58ED-3171-812E-D9FD3C499559</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="F41F2730-CA79-45BD-9741-CC0D53676021" name="BIN PK">
