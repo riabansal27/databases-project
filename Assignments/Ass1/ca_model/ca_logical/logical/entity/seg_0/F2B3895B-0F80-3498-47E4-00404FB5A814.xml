@@ -71,6 +71,20 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="po_id" id="EE86B32E-DE14-3A5F-C84F-B2CA235E75F2">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:34:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property owner]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="DA7F7D33-3470-6BB4-D1D8-30ED21260CAD" name="PROPERTY_OWNER PK">
@@ -82,10 +96,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>B5D9F878-9540-E89F-B2DF-97AC5F719DBC</attributeRef>
-<attributeRef>1B835099-89F6-2F79-10A9-681468F5F04B</attributeRef>
-<attributeRef>7B532EF6-9AF5-9F14-5DE1-C8D467A2F351</attributeRef>
-<attributeRef>EF037D15-767E-CD7A-72EF-2D3D5D7B50E0</attributeRef>
+<attributeRef>EE86B32E-DE14-3A5F-C84F-B2CA235E75F2</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

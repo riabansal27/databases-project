@@ -57,6 +57,20 @@
 <dataTypePrecision>10</dataTypePrecision>
 <ownDataTypeParameters>,10,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="prop_id" id="9A10D1B2-58ED-3171-812E-D9FD3C499559">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:28:38 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for property]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7C3A36E8-15E4-F911-96A3-55C2E892E6D3" name="PROPERTY PK">
@@ -68,9 +82,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>83935DB3-0ED5-7575-0F75-F0CD18015C64</attributeRef>
-<attributeRef>C7ADE4F7-8147-0589-FAE7-25EB48555C1C</attributeRef>
-<attributeRef>C33F0DE2-39F9-122E-5CB5-BBCAE678FF2E</attributeRef>
+<attributeRef>9A10D1B2-58ED-3171-812E-D9FD3C499559</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

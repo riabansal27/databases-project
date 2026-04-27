@@ -56,6 +56,20 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="coll_id" id="6D06F7C0-22F9-A9CC-C9CC-CA0919A95FF4">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:33:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for collection run]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="FA9DE619-336C-7E07-07E4-F2D2E1CADBD5" name="COLLECTION PK">
@@ -67,8 +81,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>5E7C2D41-A1C4-F752-C3C9-EDFD1169CD50</attributeRef>
-<attributeRef>D5244F3F-C321-C52F-BE91-E8DF4F192F2A</attributeRef>
+<attributeRef>6D06F7C0-22F9-A9CC-C9CC-CA0919A95FF4</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

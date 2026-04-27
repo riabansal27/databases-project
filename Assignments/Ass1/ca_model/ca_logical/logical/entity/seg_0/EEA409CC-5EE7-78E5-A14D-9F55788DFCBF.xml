@@ -86,6 +86,20 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="bc_id" id="67434E91-B639-4BF7-4693-2BE2CCCC9F1A">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:33:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for bin collection]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="E30AA847-6054-266E-8AD9-CE1FF888B476" name="BIN_COLLECTION PK">
@@ -97,9 +111,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>C2C11CEA-88E6-7C4E-BF0D-CECD9527A850</attributeRef>
-<attributeRef>5884A3A1-E31A-B454-4528-8DD6B04C1848</attributeRef>
-<attributeRef>D71952B9-4AE2-E490-CA2E-7C721C20EE02</attributeRef>
+<attributeRef>67434E91-B639-4BF7-4693-2BE2CCCC9F1A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

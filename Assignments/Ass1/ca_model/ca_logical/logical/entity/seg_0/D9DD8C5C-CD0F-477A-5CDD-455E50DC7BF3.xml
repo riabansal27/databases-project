@@ -72,6 +72,20 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,8,2</ownDataTypeParameters>
 </Attribute>
+<Attribute name="cbs_id" id="F87BDA83-FD05-C754-5E77-A408A051572B">
+<createdBy>riabansal</createdBy>
+<createdTime>2026-04-27 11:32:27 UTC</createdTime>
+<commentInRDBMS><![CDATA[Surrogate key for contract bin supply]]></commentInRDBMS>
+<ownerDesignName>ca_logical</ownerDesignName>
+<engineerTo>
+<item key="2D708DC0-396D-AAC9-5E1E-C0363877D5B6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CDF8B98F-7EBB-D651-F04E-FF577E04920A" name="CONTRACT_BIN_SUPPLY PK">
@@ -83,9 +97,7 @@
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>60B0FCE5-FFC9-ABEC-E6C5-3B771BB9BE71</attributeRef>
-<attributeRef>E3F14DEE-8659-7239-4EE7-59B1C7286AC0</attributeRef>
-<attributeRef>6BA88D2F-8E81-DBF7-62CB-F565EBE4CE5B</attributeRef>
+<attributeRef>F87BDA83-FD05-C754-5E77-A408A051572B</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
