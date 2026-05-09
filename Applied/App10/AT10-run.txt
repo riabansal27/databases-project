@@ -1,0 +1,107 @@
+SQL> 
+SQL> CREATE OR REPLACE PROCEDURE prc_new_pur_order (
+  2      p_pur_order_nbr    IN  NUMBER,
+  3      p_vendor_id        IN  NUMBER,
+  4      p_prod_no          IN  NUMBER,
+  5      p_po_prod_qty      IN  NUMBER,
+  6      p_po_prod_unit_cost IN NUMBER,
+  7      p_output           OUT VARCHAR2
+  8  )
+  9  AS
+ 10      v_vendor_id  NUMBER;
+ 11      v_stock      NUMBER;
+ 12  BEGIN
+ 13      -- Check 1: Does this product exist and is it supplied by the given vendor?
+ 14      SELECT vendor_id, prod_stock
+ 15      INTO v_vendor_id, v_stock
+ 16      FROM product
+ 17      WHERE prod_no = p_prod_no;
+ 18  
+ 19      IF v_vendor_id != p_vendor_id THEN
+ 20          p_output := 'Error: Product ' || p_prod_no || ' cannot be supplied by vendor ' || p_vendor_id;
+ 21          RETURN;
+ 22      END IF;
+ 23  
+ 24      -- Check 2: Is current stock less than 10?
+ 25      IF v_stock >= 10 THEN
+ 26          p_output := 'Error: Stock for product ' || p_prod_no || ' is not below 10 (current stock: ' || v_stock || ')';
+ 27          RETURN;
+ 28      END IF;
+ 29  
+ 30      -- Both checks passed: insert into purchase_order then purchase_order_item
+ 31      INSERT INTO purchase_order (po_id, vendor_id, po_date, po_status, po_total_cost)
+ 32      VALUES (p_pur_order_nbr, p_vendor_id, SYSDATE, 'P', p_po_prod_qty * p_po_prod_unit_cost);
+ 33  
+ 34      INSERT INTO purchase_order_item (po_id, prod_no, po_prod_qty, po_prod_unit_cost)
+ 35      VALUES (p_pur_order_nbr, p_prod_no, p_po_prod_qty, p_po_prod_unit_cost);
+ 36  
+ 37      COMMIT;
+ 38      p_output := 'Success: Purchase order ' || p_pur_order_nbr || ' created successfully.';
+ 39  
+ 40  EXCEPTION
+ 41      WHEN NO_DATA_FOUND THEN
+ 42          p_output := 'Error: Product ' || p_prod_no || ' does not exist.';
+ 43  END;
+ 44  /
+
+Procedure PRC_NEW_PUR_ORDER compiled
+
+SQL> -- TEST HARNESS
+SQL> 
+SQL> -- Test 1: Valid case (prod_no=2, vendor=101, stock=8 which is < 10)
+SQL> DECLARE
+  2      v_msg VARCHAR2(200);
+  3  BEGIN
+  4      prc_new_pur_order(100, 101, 2, 20, 22.50, v_msg);
+  5      DBMS_OUTPUT.PUT_LINE('Test 1: ' || v_msg);
+  6  END;
+  7  /
+Test 1: Success: Purchase order 100 created successfully.
+
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+SQL> -- Test 2: Wrong vendor (prod_no=2 belongs to vendor 101, not 102)
+SQL> DECLARE
+  2      v_msg VARCHAR2(200);
+  3  BEGIN
+  4      prc_new_pur_order(101, 102, 2, 20, 22.50, v_msg);
+  5      DBMS_OUTPUT.PUT_LINE('Test 2: ' || v_msg);
+  6  END;
+  7  /
+Test 2: Error: Product 2 cannot be supplied by vendor 102
+
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+SQL> -- Test 3: Stock not below 10 (prod_no=1, vendor=101, stock=45)
+SQL> DECLARE
+  2      v_msg VARCHAR2(200);
+  3  BEGIN
+  4      prc_new_pur_order(102, 101, 1, 10, 15.99, v_msg);
+  5      DBMS_OUTPUT.PUT_LINE('Test 3: ' || v_msg);
+  6  END;
+  7  /
+Test 3: Error: Stock for product 1 is not below 10 (current stock: 45)
+
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+SQL> -- Test 4: Product does not exist
+SQL> DECLARE
+  2      v_msg VARCHAR2(200);
+  3  BEGIN
+  4      prc_new_pur_order(103, 101, 999, 10, 15.99, v_msg);
+  5      DBMS_OUTPUT.PUT_LINE('Test 4: ' || v_msg);
+  6  END;
+  7  /
+Test 4: Error: Product 999 does not exist.
+
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+SQL> SPOOL OFF;
