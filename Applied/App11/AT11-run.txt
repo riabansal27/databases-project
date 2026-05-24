@@ -1,0 +1,114 @@
+SQL> 
+SQL> -- =============================================
+SQL> -- FUNCTION: cal_pur_order_total
+SQL> -- =============================================
+SQL> CREATE OR REPLACE FUNCTION cal_pur_order_total (
+  2      p_po_id IN NUMBER
+  3  ) RETURN NUMBER
+  4  AS
+  5      v_total NUMBER;
+  6  BEGIN
+  7      SELECT SUM(po_prod_qty * po_prod_unit_cost)
+  8      INTO v_total
+  9      FROM purchase_order_item
+ 10      WHERE po_id = p_po_id;
+ 11  
+ 12      RETURN v_total;
+ 13  END;
+ 14  /
+
+Function CAL_PUR_ORDER_TOTAL compiled
+
+SQL> 
+SQL> -- TEST HARNESS: cal_pur_order_total
+SQL> -- Test 1: Valid PO (PO 1)
+SQL> DECLARE
+  2      v_total NUMBER;
+  3  BEGIN
+  4      v_total := cal_pur_order_total(1);
+  5      DBMS_OUTPUT.PUT_LINE('Test 1 - Total for PO 1: ' || v_total);
+  6  END;
+  7  /
+Test 1 - Total for PO 1: 1474.5
+
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+SQL> -- Test 2: Valid PO (PO 3)
+SQL> DECLARE
+  2      v_total NUMBER;
+  3  BEGIN
+  4      v_total := cal_pur_order_total(3);
+  5      DBMS_OUTPUT.PUT_LINE('Test 2 - Total for PO 3: ' || v_total);
+  6  END;
+  7  /
+Test 2 - Total for PO 3: 2487.35
+
+
+PL/SQL procedure successfully completed.
+
+SQL> 
+SQL> -- =============================================
+SQL> -- TRIGGER: trg_update_stock
+SQL> -- =============================================
+SQL> CREATE OR REPLACE TRIGGER trg_update_stock
+  2  AFTER UPDATE OF po_status ON purchase_order
+  3  FOR EACH ROW
+  4  WHEN (NEW.po_status = 'C' AND OLD.po_status = 'P')
+  5  BEGIN
+  6      UPDATE product p
+  7      SET p.prod_stock = p.prod_stock + (
+  8          SELECT poi.po_prod_qty
+  9          FROM purchase_order_item poi
+ 10          WHERE poi.po_id = :NEW.po_id
+ 11          AND poi.prod_no = p.prod_no
+ 12      )
+ 13      WHERE p.prod_no IN (
+ 14          SELECT prod_no
+ 15          FROM purchase_order_item
+ 16          WHERE po_id = :NEW.po_id
+ 17      );
+ 18      DBMS_OUTPUT.PUT_LINE('Stock updated for PO: ' || :NEW.po_id);
+ 19  END;
+ 20  /
+
+Trigger TRG_UPDATE_STOCK compiled
+
+SQL> 
+SQL> -- TEST HARNESS: trg_update_stock
+SQL> SELECT prod_no, prod_name, prod_stock
+  2  FROM product
+  3  WHERE prod_no IN (SELECT prod_no FROM purchase_order_item WHERE po_id = 2);
+
+   PROD_NO PROD_NAME                                          PROD_STOCK
+---------- -------------------------------------------------- ----------
+         3 Power Adapter 65W                                          25
+
+SQL> 
+SQL> -- Update PO 2 status to C (Completed) to fire trigger
+SQL> UPDATE purchase_order
+  2  SET po_status = 'C'
+  3  WHERE po_id = 2;
+Stock updated for PO: 2
+
+
+1 row updated.
+
+SQL> 
+SQL> -- Check stock after update
+SQL> SELECT prod_no, prod_name, prod_stock
+  2  FROM product
+  3  WHERE prod_no IN (SELECT prod_no FROM purchase_order_item WHERE po_id = 2);
+
+   PROD_NO PROD_NAME                                          PROD_STOCK
+---------- -------------------------------------------------- ----------
+         3 Power Adapter 65W                                          45
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+SQL> SPOOL OFF;
