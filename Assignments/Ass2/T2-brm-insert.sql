@@ -1,8 +1,8 @@
 /*****PLEASE ENTER YOUR DETAILS BELOW*****/
 --T2-brm-insert.sql
 
---Student ID:
---Student Name:
+--Student ID: 34267433
+--Student Name: Ria Bansal
 
 /*
 Indicate if AI was used (Yes/No):
