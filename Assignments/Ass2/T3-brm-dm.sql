@@ -116,4 +116,13 @@ AND UPPER(cust_fname) = UPPER('ELLA') AND UPPER(cust_bname) = UPPER('Flintstone 
 COMMIT;
 
 --3(e)
+-- On 23 May 2026, VICTORIA ELLA from Flintstone Store cancelled the job
+-- Remove the job from the system
 
+DELETE FROM job
+WHERE quote_no = (SELECT quote_no FROM quote
+WHERE quote_prepared_date = TO_DATE('17-May-2026', 'dd-Mon-yyyy')
+AND cust_no = (SELECT cust_no FROM customer
+WHERE UPPER(cust_gname) = UPPER('VICTORIA') AND UPPER(cust_fname) = UPPER('ELLA') AND UPPER(cust_bname) = UPPER('Flintstone Store')));
+
+COMMIT;
