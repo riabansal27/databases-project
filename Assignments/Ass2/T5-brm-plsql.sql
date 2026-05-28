@@ -1,8 +1,8 @@
 --*****PLEASE ENTER YOUR DETAILS BELOW*****
 --T5-brm-plsql.sql
 
---Student ID:
---Student Name:
+--Student ID: 34267433
+--Student Name: Ria Bansal
 
 /*
     -- Submission Declaration - must not be removed - removal will result in no marks being awarded --

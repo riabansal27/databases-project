@@ -48,6 +48,7 @@ ORDER BY quote_no;
 -- Each truck needs regular services
 -- SERVICE table stores service start and end date/time per truck
 -- SERVICE_TASK table stores individual tasks within a service
+-- Each task has one mechanic and a free text note
 
 -- Create SERVICE table
 CREATE TABLE service (
@@ -67,6 +68,7 @@ ALTER TABLE service ADD CONSTRAINT service_truck_fk FOREIGN KEY (truck_vin)
     REFERENCES truck (truck_vin);
 
 -- Create SERVICE_TASK table
+-- Task types stored separately to allow expansion over time
 CREATE TABLE service_task_type (
     task_type_code  VARCHAR2(10) NOT NULL,
     task_type_desc  VARCHAR2(100) NOT NULL
@@ -100,6 +102,7 @@ ALTER TABLE service_task ADD CONSTRAINT service_task_type_fk FOREIGN KEY (task_t
 ALTER TABLE service_task ADD CONSTRAINT service_task_mechanic_fk FOREIGN KEY (emp_no)
     REFERENCES employee (emp_no);
 
+-- Show structural changes
 DESC service;
 DESC service_task_type;
-DESC service_task; 
+DESC service_task;
