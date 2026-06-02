@@ -19,6 +19,10 @@ SET HEADING OFF
 
 -- Task 6(a): Generate JSON documents for each customer who has at least one quote
 -- Each document represents a customer and their quotes with job statistics
+
+-- Generates one JSON document per customer who has at least one quote
+-- Includes customer details, statistics, and all their quotes with job info
+
 SELECT
     JSON_OBJECT(
         '_id' VALUE c.cust_no,
