@@ -146,10 +146,187 @@ ROLLBACK;
 --(c)
 -- Stored procedure to handle job assignment
 -- Validates all business rules before inserting a new job
--- Parameters: quote_no, driver_no, dispatcher_no, truck_vin, trailer_code,job_cost, job_payment, pickup_dt, job_duration(hours), output message
+-- Parameters: quote_no, driver_no, dispatcher_no, truck_vin, trailer_code,
+--             job_cost, job_payment, pickup_dt, job_duration(hours), output message
+
+CREATE OR REPLACE PROCEDURE prc_entry_job(
+p_quote_no IN NUMBER,
+p_driver_no IN NUMBER,
+p_dispatcher_no IN NUMBER,
+p_truck_vin IN VARCHAR2,
+p_trailer_code IN CHAR,
+p_job_cost IN NUMBER,
+p_job_payment IN CHAR,
+p_job_pickup_dt IN DATE,
+p_job_duration IN NUMBER,
+p_output OUT VARCHAR2)
+IS
+    v_quote_count     NUMBER;
+    v_job_count       NUMBER;
+    v_driver_role     CHAR(1);
+    v_dispatcher_role CHAR(1);
+    v_combo_count     NUMBER;
+    v_new_job_no      NUMBER;
+    v_quote_cost      NUMBER;
+
+BEGIN
+    -- Check 1: Quote must exist
+    SELECT COUNT(*) INTO v_quote_count
+    FROM quote
+    WHERE quote_no = p_quote_no;
+    
+    IF v_quote_count = 0 THEN
+        p_output := 'Error: Quote ' || p_quote_no || ' does not exist';
+        RETURN;
+    END IF;
+    
+    -- Check 2: Quote must not already be assigned to a job
+    SELECT COUNT(*) INTO v_job_count
+    FROM job
+    WHERE quote_no = p_quote_no;
+    
+    IF v_job_count > 0 THEN
+        p_output := 'Error: Quote ' || p_quote_no || ' has already been assigned to a job';
+        RETURN;
+    END IF;
+    
+    -- Check 3: Driver must exist and have role D
+    v_driver_role := get_emp_role(p_driver_no);
+    
+    IF v_driver_role IS NULL THEN
+        p_output := 'Error: Driver ' || p_driver_no || ' does not exist';
+        RETURN;
+    END IF;
+    
+    IF v_driver_role != 'D' THEN
+        p_output := 'Error: Employee ' || p_driver_no || ' is not a driver';
+        RETURN;
+    END IF;
+    
+    -- Check 4: Dispatcher must exist and have role T
+    v_dispatcher_role := get_emp_role(p_dispatcher_no);
+    
+    IF v_dispatcher_role IS NULL THEN
+        p_output := 'Error: Dispatcher ' || p_dispatcher_no || ' does not exist';
+        RETURN;
+    END IF;
+    
+    IF v_dispatcher_role != 'T' THEN
+        p_output := 'Error: Employee ' || p_dispatcher_no || ' is not a truck dispatcher';
+        RETURN;
+    END IF;
+    
+    -- Check 5: Truck and trailer combination must exist
+    SELECT COUNT(*) INTO v_combo_count
+    FROM combination
+    WHERE truck_vin = p_truck_vin
+    AND trailer_code = p_trailer_code;
+    
+    IF v_combo_count = 0 THEN
+        p_output := 'Error: Truck ' || p_truck_vin || ' and trailer ' || p_trailer_code || ' is not a valid combination';
+        RETURN;
+    END IF;
+    
+    -- Get quote cost for job_cost logic
+    SELECT quote_cost INTO v_quote_cost
+    FROM quote
+    WHERE quote_no = p_quote_no;
+    
+    -- All checks passed - insert the job
+    -- job_cost is NULL if same as quote cost, otherwise use provided value
+    SELECT job_seq.NEXTVAL INTO v_new_job_no FROM dual;
+    
+    INSERT INTO job (job_no, job_pickup_dt, job_intended_dropoff_dt, job_cost,
+                     job_payment_made, quote_no, sched_emp_no, driver_emp_no,
+                     trailer_code, truck_vin)
+    VALUES (v_new_job_no,
+            p_job_pickup_dt,
+            p_job_pickup_dt + (p_job_duration/24),
+            CASE WHEN p_job_cost = v_quote_cost THEN NULL ELSE p_job_cost END,
+            p_job_payment,
+            p_quote_no,
+            p_dispatcher_no,
+            p_driver_no,
+            p_trailer_code,
+            p_truck_vin);
+    
+    COMMIT;
+    
+    p_output := 'Success: Job ' || v_new_job_no || ' created successfully for quote ' || p_quote_no;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        p_output := 'Error: Unexpected error - ' || SQLERRM;
+END;
+/
+
+-- Write Test Harness for (c)
+-- Test 1: Valid job assignment - should succeed
+
+DECLARE
+    v_msg VARCHAR2(200);
+BEGIN
+    prc_entry_job(42, 15, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+                  TO_DATE('01-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
+    DBMS_OUTPUT.PUT_LINE('Test 1: ' || v_msg);
+END;
+/
+
+-- Clean up Test 1 job so test can be rerun
+DELETE FROM job WHERE quote_no = 42;
+COMMIT;
 
 
+-- Test 2: Quote does not exist - should fail
+DECLARE
+    v_msg VARCHAR2(200);
+BEGIN
+    prc_entry_job(999, 15, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+                  TO_DATE('02-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
+    DBMS_OUTPUT.PUT_LINE('Test 2: ' || v_msg);
+END;
+/
 
+-- Test 3: Quote already assigned to a job - should fail
+DECLARE
+    v_msg VARCHAR2(200);
+BEGIN
+    prc_entry_job(20, 15, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+                  TO_DATE('03-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
+    DBMS_OUTPUT.PUT_LINE('Test 3: ' || v_msg);
+END;
+/
+
+-- Test 4: Employee is not a driver - should fail
+DECLARE
+    v_msg VARCHAR2(200);
+BEGIN
+    prc_entry_job(41, 12, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+                  TO_DATE('04-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
+    DBMS_OUTPUT.PUT_LINE('Test 4: ' || v_msg);
+END;
+/
+
+-- Test 5: Employee is not a dispatcher - should fail
+DECLARE
+    v_msg VARCHAR2(200);
+BEGIN
+    prc_entry_job(42, 15, 15, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+                  TO_DATE('05-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
+    DBMS_OUTPUT.PUT_LINE('Test 5: ' || v_msg);
+END;
+/
+
+-- Test 6: Invalid truck trailer combination - should fail
+DECLARE
+    v_msg VARCHAR2(200);
+BEGIN
+    prc_entry_job(43, 15, 12, '1HGBH41JXMN109186', 'TRL09', NULL, 'Y',
+                  TO_DATE('06-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
+    DBMS_OUTPUT.PUT_LINE('Test 6: ' || v_msg);
+END;
+/
 
 
 /* do not add any further set serveroutput and set echo commands in this file */
