@@ -14,6 +14,7 @@
 -- quote_status: Y = assigned to a job, N = not assigned
 -- quote_not_assigned_reason: reason if not assigned by preferred start date
 
+
 ALTER TABLE quote ADD quote_status CHAR(1);
 ALTER TABLE quote ADD quote_not_assigned_reason VARCHAR2(200);
 
@@ -44,11 +45,15 @@ FROM quote
 ORDER BY quote_no;
 
 --4(b)
-
 -- Each truck needs regular services
 -- SERVICE table stores service start and end date/time per truck
--- SERVICE_TASK table stores individual tasks within a service
--- Each task has one mechanic and a free text note
+-- SERVICE_TASK_TYPE stores expandable list of task types
+-- SERVICE_TASK stores individual tasks within a service with mechanic assigned
+
+-- Drop tables if they exist to allow clean recreation
+DROP TABLE service_task CASCADE CONSTRAINTS PURGE;
+DROP TABLE service_task_type CASCADE CONSTRAINTS PURGE;
+DROP TABLE service CASCADE CONSTRAINTS PURGE;
 
 -- Create SERVICE table
 CREATE TABLE service (
@@ -67,8 +72,7 @@ ALTER TABLE service ADD CONSTRAINT service_pk PRIMARY KEY (service_id);
 ALTER TABLE service ADD CONSTRAINT service_truck_fk FOREIGN KEY (truck_vin)
     REFERENCES truck (truck_vin);
 
--- Create SERVICE_TASK table
--- Task types stored separately to allow expansion over time
+-- Create SERVICE_TASK_TYPE table to allow task types to expand over time
 CREATE TABLE service_task_type (
     task_type_code  VARCHAR2(10) NOT NULL,
     task_type_desc  VARCHAR2(100) NOT NULL
@@ -92,7 +96,7 @@ COMMENT ON COLUMN service_task.service_task_id IS 'Identifier for service task';
 COMMENT ON COLUMN service_task.service_id IS 'Service this task belongs to';
 COMMENT ON COLUMN service_task.task_type_code IS 'Type of service task performed';
 COMMENT ON COLUMN service_task.emp_no IS 'Mechanic who performed the task';
-COMMENT ON COLUMN service_task.task_note IS 'Free text note explaining the task';
+COMMENT ON COLUMN service_task.task_note IS 'Free text note explaining the task up to 200 characters';
 
 ALTER TABLE service_task ADD CONSTRAINT service_task_pk PRIMARY KEY (service_task_id);
 ALTER TABLE service_task ADD CONSTRAINT service_task_service_fk FOREIGN KEY (service_id)
