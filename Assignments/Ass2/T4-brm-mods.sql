@@ -15,7 +15,7 @@
 -- quote_not_assigned_reason: reason if not assigned by preferred start date
 
 
-ALTER TABLE quote ADD quote_status CHAR(1);
+ALTER TABLE quote ADD quote_status CHAR(1) DEFAULT 'N' NOT NULL;
 ALTER TABLE quote ADD quote_not_assigned_reason VARCHAR2(200);
 
 -- Add column comments

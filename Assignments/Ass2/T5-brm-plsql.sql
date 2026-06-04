@@ -264,19 +264,15 @@ END;
 -- Write Test Harness for (c)
 -- Test 1: Valid job assignment - should succeed
 
+
 DECLARE
     v_msg VARCHAR2(200);
 BEGIN
-    prc_entry_job(42, 15, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+    prc_entry_job(41, 15, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
                   TO_DATE('01-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
     DBMS_OUTPUT.PUT_LINE('Test 1: ' || v_msg);
 END;
 /
-
--- Clean up Test 1 job so test can be rerun
-DELETE FROM job WHERE quote_no = 42;
-COMMIT;
-
 
 -- Test 2: Quote does not exist - should fail
 DECLARE
@@ -302,7 +298,7 @@ END;
 DECLARE
     v_msg VARCHAR2(200);
 BEGIN
-    prc_entry_job(41, 12, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+    prc_entry_job(42, 12, 12, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
                   TO_DATE('04-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
     DBMS_OUTPUT.PUT_LINE('Test 4: ' || v_msg);
 END;
@@ -312,7 +308,7 @@ END;
 DECLARE
     v_msg VARCHAR2(200);
 BEGIN
-    prc_entry_job(42, 15, 15, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
+    prc_entry_job(43, 15, 15, '1HGBH41JXMN109186', 'TRL01', NULL, 'Y',
                   TO_DATE('05-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
     DBMS_OUTPUT.PUT_LINE('Test 5: ' || v_msg);
 END;
@@ -322,7 +318,7 @@ END;
 DECLARE
     v_msg VARCHAR2(200);
 BEGIN
-    prc_entry_job(43, 15, 12, '1HGBH41JXMN109186', 'TRL09', NULL, 'Y',
+    prc_entry_job(44, 15, 12, '1HGBH41JXMN109186', 'TRL09', NULL, 'Y',
                   TO_DATE('06-Jun-2026 09:00:00', 'dd-Mon-yyyy hh24:mi:ss'), 5, v_msg);
     DBMS_OUTPUT.PUT_LINE('Test 6: ' || v_msg);
 END;
