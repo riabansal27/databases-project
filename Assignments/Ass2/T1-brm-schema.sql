@@ -19,8 +19,8 @@ DROP TABLE quote CASCADE CONSTRAINTS PURGE;
 -- Create EMPLOYEE table
 CREATE TABLE employee (
     emp_no          NUMERIC(3) NOT NULL,
-    emp_gname       VARCHAR2(30) NOT NULL,
-    emp_fname       VARCHAR2(30) NOT NULL,
+    emp_gname       VARCHAR2(30),
+    emp_fname       VARCHAR2(30),
     emp_contact_no  CHAR(10) NOT NULL,
     emp_licenceno   VARCHAR2(11),
     emp_role        CHAR(1) NOT NULL,

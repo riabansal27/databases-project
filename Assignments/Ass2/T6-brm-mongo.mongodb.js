@@ -67,7 +67,6 @@ db.brm_customers.find(
 // ENSURE that your query is formatted and has a semicolon
 // (;) at the end of this answer
 
-// (d)
 // (i) Add new customer Patrick Bosse with customer ID 1001
 db.brm_customers.insertOne({
     "_id": 1001,
